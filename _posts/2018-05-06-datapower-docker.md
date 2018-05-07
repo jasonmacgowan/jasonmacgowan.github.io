@@ -33,9 +33,9 @@ When the container is launched, we're automatically attached to the container. W
 
 Login with username `admin` and password `admin`.
 
-{% highlight bash %}
+{% highlight java %}
 login: admin
-Password: \*\*\*\*
+Password: ****
 
 Welcome to IBM DataPower Gateway console configuration.
 Copyright IBM Corporation 1999,2018-2018
@@ -49,21 +49,21 @@ idg#
 
 This CLI is fine, but DataPower has a powerful web-based GUI that we can use instead. To enable it, enter config mode.
 
-{% highlight yaml %}
+{% highlight text %}
 idg# config
 Global configuration mode
 {% endhighlight %}
 
 Next, let's actually enable the service, binding to all IPs with `0.0.0.0` and to port `9090`
 
-{% highlight yaml %}
+{% highlight text %}
 idg(config)# web-mgmt 0.0.0.0 9090
 Web management: successfully started
 {% endhighlight %}
 
 Finally, write out changes to disk so it will persist on restarts
 
-{% highlight yaml %}
+{% highlight text %}
 idg(config)# write mem
 Overwrite previously saved configuration? Yes/No [y/n]: y
 Configuration saved successfully.
